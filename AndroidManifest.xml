@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="kennedy.walk.avec"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="kennedy.walk.avec.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="kennedy.walk.avec.pushnotifications.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name="Avec"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="kennedy.walk.avec.DispatchActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="kennedy.walk.avec.LoginActivity"
+            android:label="@string/app_name" >
+        </activity>
+         <activity
+            android:name="kennedy.walk.avec.FriendActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="kennedy.walk.avec.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="kennedy.walk.avec.SignupActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="kennedy.walk.avec.LastFMSetupActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="kennedy.walk.avec.ProfileSetupActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="kennedy.walk.avec.UserProfileActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="kennedy.walk.avec.ProfileActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="kennedy.walk.avec.ProfileEditActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="kennedy.walk.avec.ChatActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="kennedy.walk.avec.ChatListActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        
+        
+        <service android:name="com.parse.PushService" />
+        <receiver android:name="com.parse.ParseBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        
+        <receiver android:name="kennedy.walk.avec.FriendRequestReceiver" >
+            <intent-filter>
+                <action android:name="kennedy.walk.avec.NOTIFY_FRIEND" />
+            </intent-filter>
+        </receiver>
+        
+        <receiver android:name="kennedy.walk.avec.ChatReceiver" >
+            <intent-filter>
+                <action android:name="kennedy.walk.avec.NOTIFY_CHAT" />
+            </intent-filter>
+        </receiver>
+        
+        
+        <receiver
+            android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                
+                <category android:name="kennedy.walk.avec" />
+            </intent-filter>
+        </receiver>
+        
+        
+    </application>
+
+</manifest>

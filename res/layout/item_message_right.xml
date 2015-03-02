@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    
+    <LinearLayout
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_margin="5sp"
+    	android:layout_alignParentRight="true"
+    	android:orientation="vertical" >
+    
+
+    <TextView
+        android:id="@+id/message_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:maxWidth="500sp"
+        android:background="@drawable/my_chat_bubble_android"
+        android:text="@string/chat_string"
+        android:textSize="18sp" />
+    
+    
+</LinearLayout>
+
+</RelativeLayout>

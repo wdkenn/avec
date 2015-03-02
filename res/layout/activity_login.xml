@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#1F7EBB"
+    android:orientation="vertical"
+    tools:context=".LoginActivity" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/title"
+        android:fontFamily="serif"
+        android:textColor="#FFFFFF"
+        android:textSize="230sp"
+        />
+    
+    <EditText 
+        android:id="@+id/emailLogin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70sp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#CFCFCF"
+        android:hint="@string/emailHint"
+        />
+    
+    <EditText 
+        android:id="@+id/passwordLogin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#CFCFCF"
+        android:inputType="textPassword"
+        android:hint="@string/passwordHint"
+        />
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        >
+        
+        <Button
+            android:id="@+id/loginButton" 
+            android:layout_width="0dp"
+            android:layout_height="70sp"
+            android:layout_weight="1"
+            android:layout_marginTop="70sp"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:fontFamily="serif"
+            android:text="@string/loginBtn"            
+            />
+        
+        <Button
+            android:id="@+id/signUpButton" 
+            android:layout_width="0dp"
+            android:layout_height="70sp"
+            android:layout_weight="1"
+            android:layout_marginTop="70sp"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:fontFamily="serif"
+            android:text="@string/signupBtn"            
+            />
+    </LinearLayout>
+    
+
+    
+
+</LinearLayout>

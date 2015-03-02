@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1F7EBB"
+    android:orientation="vertical"
+    android:weightSum="8" >
+    
+    <AutoCompleteTextView
+        android:id="@+id/artist"
+        android:layout_width="match_parent"
+        android:layout_height="70sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:paddingLeft="10sp"
+        android:textColorHint="#CFCFCF"
+        android:dropDownVerticalOffset="5dp"
+        android:dropDownHeight="wrap_content"
+        android:dropDownWidth="wrap_content"
+        android:background="@drawable/rect_text_edit"
+        android:hint="Enter in one of your favorite artists...">
+        
+        <requestFocus />
+        
+    </AutoCompleteTextView>
+        
+    <ListView
+        android:id="@+id/userTopArtistList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7" >
+</ListView>
+    
+ 
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="0sp"
+        android:weightSum="2"
+        >
+        
+        <Button 
+            android:id="@+id/addArtistBtn"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:fontFamily="serif"
+            android:textSize="20sp"
+            android:text="Add artist to list"
+            />
+        
+        <Button 
+            android:id="@+id/submitList"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:fontFamily="serif"
+            android:textSize="20sp"
+            android:text="Submit List"
+            />
+        
+    </LinearLayout>
+        
+
+</LinearLayout>

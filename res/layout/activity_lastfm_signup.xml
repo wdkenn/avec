@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1F7EBB"
+	android:gravity="center_vertical"
+    android:orientation="vertical" >
+    
+	<TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Avec Profile Setup: Last FM"
+        android:fontFamily="serif"
+        android:textColor="#FFFFFF"
+        android:textSize="60sp"
+        />
+    
+    <EditText 
+        android:id="@+id/lastFMET"
+	    android:layout_width="fill_parent"
+	    android:layout_margin="50sp"
+	    android:layout_height="50sp"
+	    android:background="@drawable/rect_text_edit"
+	    android:hint="@string/lastfmHint"
+		
+	    />
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="bottom"
+        android:weightSum="2"
+        >
+        
+        <Button
+            android:id="@+id/manualBtn" 
+            android:layout_width="0dp"
+            android:layout_height="70sp"
+            android:layout_weight="1"
+            android:layout_marginTop="30sp"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:fontFamily="serif"
+            android:text="Manually enter top artists"            
+            />
+        
+        <Button
+            android:id="@+id/lastfmBtn" 
+            android:layout_width="0dp"
+            android:layout_height="70sp"
+            android:layout_weight="1"
+            android:layout_marginTop="30sp"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:fontFamily="serif"
+            android:text="Create Profile using Last FM"            
+            />
+    </LinearLayout>
+
+</LinearLayout>

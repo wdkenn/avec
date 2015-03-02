@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp" >
+    
+
+    
+    <LinearLayout
+        android:id="@+id/itemData"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_alignParentLeft="true"
+         >
+         
+    	<TextView
+         android:id="@+id/artistName"
+         android:textAppearance="?android:attr/textAppearanceMedium"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="@string/artist_name"
+         android:textColor="#FFFFFF"
+        />
+    	
+    	
+    	
+    	
+    	<LinearLayout
+    	    android:layout_height="wrap_content" 
+    	    android:layout_width="fill_parent"
+    	    android:orientation="horizontal"
+    	    >
+
+    	</LinearLayout>
+    	
+    </LinearLayout>
+    
+    <Button 
+        android:id="@+id/deleteArtistBtn"
+    	android:layout_width="25sp"
+        android:layout_height="25sp"
+        android:layout_marginTop="10sp"
+   	    android:layout_alignParentRight="true"
+   	    android:textAlignment="center"
+   	    android:textColor="#FFFFFF"
+   	    android:text="X"
+   	    android:background="@drawable/rounded_button"
+    	    />
+    
+</RelativeLayout>
